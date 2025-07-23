@@ -1,13 +1,23 @@
+resources:
+- name: concourse-examples
+  type: git
+  icon: github
+  source:
+    uri: https://github.com/zak-02/Projects
+
 jobs:
-- name: bar-chart-job
+- name: read-the-readme
   plan:
-  - task: bar-chart-task
+  - get: concourse-examples
+  - task: cat-readme
     config:
       platform: linux
-
       image_resource:
         type: registry-image
-        source: 
-          repository: https://github.com/zak-02/submodule/tree/8bfbdfb9d6562efa621a76d84b9d71a6e938dd1e
+        source:
+          repository: busybox
+      inputs: # pass concourse-examples into this task step
+      - name: concourse-examples
       run:
-      path: submodule/netflix.py
+        path: cat
+        args: ["submodules/netflix.py"]
