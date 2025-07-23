@@ -1,5 +1,5 @@
 import pandas as pd
-import matplotlib.pyplot as plt  # Correct import
+import matplotlib.pyplot as plt 
 
 data = pd.read_csv("netflix_titles.csv")
 

@@ -1,0 +1,14 @@
+jobs:
+- name: bar-chart-job
+  plan:
+  - task: bar-chart-task
+    config:
+       platform: linux
+
+       image resource:
+         type: registry-image
+        source: 
+          repository: https://github.com/zak-02/submodule/tree/8bfbdfb9d6562efa621a76d84b9d71a6e938dd1e
+       run:
+       path: python3
+       args[netflix.py]
