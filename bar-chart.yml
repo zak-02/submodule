@@ -3,7 +3,7 @@ resources:
   type: git
   icon: github
   source:
-    uri: https://github.com/zak-02/Projects
+    uri: https://github.com/zak-02/submodule/tree/b2c81dc79a6c90aa417e7c50990ad30288e18ada
 
 jobs:
 - name: execute-code
