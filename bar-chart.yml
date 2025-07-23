@@ -4,7 +4,8 @@ resources:
   icon: github
   source:
     uri: https://github.com/zak-02/submodule/tree/3262abede41779ade2d050da6f0d5d3524af3f6f
-
+    username: zak-02
+    password: PollyVacher1
 jobs:
 - name: execute-code
   plan:
