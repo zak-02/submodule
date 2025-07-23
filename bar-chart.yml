@@ -6,18 +6,16 @@ resources:
     uri: https://github.com/zak-02/Projects
 
 jobs:
-- name: program
+- name: run-job
   plan:
   - get: concourse-examples
-  - task: run
-    config:
-      platform: linux
-      image_resource:
-        type: registry-image
-        source:
-          repository: busybox
-      inputs: # pass concourse-examples into this task step
-      - name: concourse-examples
-      run:
-        path: ./
-        args: ["concourse-examples/submodule/netflix.py"]
+  - task: run-task
+config:
+  platform: linux
+  image_resource:
+    type: registry-image
+  source:
+    repository: python
+run:
+  path: python  # Use Python to run a script or command
+  args: ["consoure-examples/submodule/netflix.py"]
