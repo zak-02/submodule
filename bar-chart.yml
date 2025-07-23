@@ -10,5 +10,4 @@ jobs:
         source: 
           repository: https://github.com/zak-02/submodule/tree/8bfbdfb9d6562efa621a76d84b9d71a6e938dd1e
       run:
-      path: python3
-      args: [netflix.py]
+      path: submodule/netflix.py
