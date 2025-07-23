@@ -3,7 +3,7 @@ resources:
   type: git
   icon: github
   source:
-    uri: https://github.com/zak-02/submodule/tree/3262abede41779ade2d050da6f0d5d3524af3f6f
+    uri: https://github.com/zak-02/Projects
 
 jobs:
 - name: execute-code
@@ -20,4 +20,4 @@ jobs:
       - name: concourse-examples
       run:
         path: cat
-        args: ["netflix.py"]
+        args: ["netflix.py']
