@@ -6,10 +6,10 @@ resources:
     uri: https://github.com/zak-02/Projects
 
 jobs:
-- name: execute-code
+- name: program
   plan:
-  - get: netflix
-  - task: cat-netflix
+  - get: concourse-examples
+  - task: run
     config:
       platform: linux
       image_resource:
@@ -19,5 +19,5 @@ jobs:
       inputs: # pass concourse-examples into this task step
       - name: concourse-examples
       run:
-        path: cat
-        args: ["submodule/netflix.py']
+        path: ./
+        args: ["concourse-examples/submodule/netflix.py"]
