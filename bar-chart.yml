@@ -6,10 +6,10 @@ resources:
     uri: https://github.com/zak-02/Projects
 
 jobs:
-- name: read-the-readme
+- name: execute-code
   plan:
   - get: concourse-examples
-  - task: cat-readme
+  - task: cat-netflix
     config:
       platform: linux
       image_resource:
