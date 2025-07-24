@@ -10,12 +10,14 @@ jobs:
   plan:
   - get: concourse-examples
   - task: run-task
-config:
-  platform: linux
-  image_resource:
-    type: registry-image
-  source:
-    repository: python
-run:
-  path: python  # Use Python to run a script or command
-  args: ["consoure-examples/submodule/netflix.py"]
+    config:
+      platform: linux
+      image_resource:
+        type: registry-image
+        source:
+          repository: python
+      inputs: # pass concourse-examples into this task step
+      - name: concourse-examples
+      run:
+        path: sh
+        args: ["myscript.sh"]
