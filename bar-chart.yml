@@ -3,7 +3,8 @@ resources:
   type: git
   icon: github
   source:
-    uri: https://github.com/zak-02/Projects
+    uri: https://github.com/zak-02/submodule.git
+    branch: main
 
 jobs:
 - name: run-job
@@ -20,4 +21,9 @@ jobs:
       - name: concourse-examples
       run:
         path: sh
-        args: ["myscript.sh"]
+        args:
+        - -cx
+        # this is just a bash script
+        - |
+          pip install -r requirements
+          python netflix.py
