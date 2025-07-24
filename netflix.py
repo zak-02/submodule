@@ -1,7 +1,7 @@
 import pandas as pd
 import matplotlib.pyplot as plt 
 
-data = pd.read_csv("submodule/netflixTitles.csv")
+data = pd.read_csv("netflixTitles.csv")
 
 
 type_counts = data['type'].value_counts()
