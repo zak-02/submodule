@@ -19,5 +19,9 @@ jobs:
       inputs: # pass concourse-examples into this task step
       - name: concourse-examples
       run:
-        path: python
-        args: ["concourse-examples/submodule/netflix.py"]
+        path: sh
+        args:
+        - -cx
+        - |
+          pip install -r requirements.txt
+          python netflix.py
