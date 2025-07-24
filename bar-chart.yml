@@ -4,7 +4,6 @@ resources:
   icon: github
   source:
     uri: https://github.com/zak-02/submodule.git
-    branch: main
 
 jobs:
 - name: run-job
@@ -20,10 +19,5 @@ jobs:
       inputs: # pass concourse-examples into this task step
       - name: concourse-examples
       run:
-        path: sh
-        args:
-        - -cx
-        # this is just a bash script
-        - |
-          pip install -r requirements
-          python netflix.py
+        path: python
+        args: ["concourse-examples/submodule/netflix.py"]
