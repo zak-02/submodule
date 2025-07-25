@@ -3,7 +3,7 @@ resources:
   type: git
   icon: github
   source:
-    uri: https://github.com/zak-02/submodule.git
+    uri: https://github.com/zak-02/submodule
 
 jobs:
 - name: run-job
@@ -23,5 +23,6 @@ jobs:
         args:
         - -cx
         - |
+          cd concourse-examples
           pip install -r requirements.txt
           python netflix.py
