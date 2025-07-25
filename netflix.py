@@ -13,4 +13,8 @@ plt.xlabel('Type')
 plt.ylabel('Amount')
 plt.title('Number of Titles by Type')
 
+
+plt.savefig('chart')
 plt.show()
+
+
